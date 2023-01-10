@@ -1,4 +1,4 @@
-const url = 'http://10.0.0.77:5000';
+const url = 'https://inshop-api-kee2poa55a-uc.a.run.app';
 
 // call GET /api/GetImageForLabel and return the object
 
