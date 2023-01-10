@@ -1,0 +1,64 @@
+.main {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    height: 100vh;
+  }
+  .webview {
+    width: 100%;
+    height: 100%;
+  }
+  nav.side {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    overflow: scroll;
+  }
+  nav.side ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav.side li {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+  }
+  nav.side li button {
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 15px;
+    background-color: grey;
+    color: #fff;
+    border: none;
+    text-align: left;
+  }
+  nav.side li button:hover {
+    background-color: #444;
+  }
+  .productImage {
+    width: auto;
+    height: 70%;
+  }
+  .productLabel {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  @media screen and (max-width: 500px) {
+    nav.side li {
+      width: 50%;
+    }
+    nav.side li {
+      display: flex;
+      flex-direction: column;
+    }
+  }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color labeler</title>
+  <script src="./vue.js"></script>
+  <script type="module"  src="./Api.js"></script>
+  <!-- import style.css -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="app">
+      <div>
+        <nav class="side">
+        <ul>
+          <li v-for="color in Colors" :key="color.name">
+            <!-- create a button with label color.name and background color color.hex -->
+            
+            <button :style="color.style" @click="() => labelColor(color.name)" >{{ color.name }}</button>
+          </li>
+        </ul>
+      </nav>
+        <div class="main">
+          <h1 class="productLabel">{{product.article}}</h1>
+          <p class="productLabel">{{product.name}}</p>
+          <p class="productLabel">{{product.url}}</p>
+          <img class="productImage" :src="imageSrc" />
+          <button class="nextButton" @click="getImage">Next</button>
+        </div>
+      </div>
+  </div>
+  <!-- import ./main.js with a script tag -->
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
