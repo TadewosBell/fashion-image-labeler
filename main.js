@@ -23,7 +23,7 @@ var app = new Vue({
           {name: 'Burgundy', style: {backgroundColor: '#800020'}},
           {name: 'Cardinal Red', style: {backgroundColor: '#C41E3A'}},
           {name: 'Charcoal Grey', style: {backgroundColor: '#36454F'}},
-          {name: 'Colar Red', style: {backgroundColor: '#FF2400'}},
+          {name: 'Coral Red', style: {backgroundColor: '#FF2400'}},
           {name: 'Denim', style: {backgroundColor: '#1560BD'}},
           {name: 'Forest Green', style: {backgroundColor: '#014421'}},
           {name: 'Hot Pink', style: {backgroundColor: '#FF69B4'}},
