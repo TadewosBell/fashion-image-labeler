@@ -62,6 +62,10 @@ var app = new Vue({
         getImage() {
             getImageForLabel().then((product) => {
                 // https://inshopthumbs.s3.amazonaws.com/product_images/{}.jpg set imageSrc to image._id
+                if(product.url.includes('ssense.com')) {
+                    console.log('ssense.com')
+                    this.getImage();
+                }
                 this.imageSrc = `https://inshopthumbs.s3.amazonaws.com/product_images/${product._id}.jpg`;
                 this.product = product;
                 });
@@ -83,5 +87,5 @@ var app = new Vue({
                 getNewImage();
             });
         }
-    }
+    },
   })
