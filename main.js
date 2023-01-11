@@ -62,7 +62,7 @@ var app = new Vue({
         getImage() {
             getImageForLabel().then((product) => {
                 // https://inshopthumbs.s3.amazonaws.com/product_images/{}.jpg set imageSrc to image._id
-                if(product.url.includes('ssense.com')) {
+                if(product.mainImage.includes('ssense.com')) {
                     console.log('ssense.com')
                     this.getImage();
                 }
