@@ -18,6 +18,7 @@ var app = new Vue({
         Colors: [
           {name: 'Aqua Blue', style: {backgroundColor: '#00FFFF',color: 'black'}},
           {name: 'Black', style: {backgroundColor: '#000000'}},
+          {name: 'Light Brown', style: {backgroundColor: '#C19A6B', color: 'black'}},
           {name: 'Brown', style: {backgroundColor: '#A52A2A'}},
           {name: 'Burgundy', style: {backgroundColor: '#800020'}},
           {name: 'Cardinal Red', style: {backgroundColor: '#C41E3A'}},
