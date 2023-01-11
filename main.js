@@ -50,6 +50,7 @@ var app = new Vue({
           {name: 'Floral', style: {backgroundColor: 'pink'}},
           {name: 'Stripes', style: {backgroundColor: 'grey'}},
           {name: 'Polka Dots', style: {backgroundColor: 'black'}},
+          {name: 'Cream', style: {backgroundColor: '#FFFDD0', color: 'black'}},
           {name: 'White', style: {backgroundColor: 'white', color: 'black'}},
         ],
         imageSrc: '',
