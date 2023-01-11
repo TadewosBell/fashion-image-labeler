@@ -17,6 +17,8 @@ var app = new Vue({
         // example {name: 'Aqua Blue', style: {backgroundColor: '#00FFFF'}}
         Colors: [
           {name: 'Aqua Blue', style: {backgroundColor: '#00FFFF',color: 'black'}},
+          {name: 'Royal Blue', style: {backgroundColor: '#4169E1'}},
+          {name: 'Sky Blue', style: {backgroundColor: '#87CEEB'}},
           {name: 'Black', style: {backgroundColor: '#000000'}},
           {name: 'Light Brown', style: {backgroundColor: '#C19A6B', color: 'black'}},
           {name: 'Brown', style: {backgroundColor: '#A52A2A'}},
@@ -25,6 +27,7 @@ var app = new Vue({
           {name: 'Coral Red', style: {backgroundColor: '#FF2400'}},
           {name: 'Denim', style: {backgroundColor: '#1560BD'}},
           {name: 'Forest Green', style: {backgroundColor: '#014421'}},
+          {name: 'Pink', style: {backgroundColor: '#FF69B4'}},
           {name: 'Hot Pink', style: {backgroundColor: '#FF69B4'}},
           {name: 'Magenta', style: {backgroundColor: '#FF00FF'}},
           {name: 'Lemon Yellow', style: {backgroundColor: '#FFFF00', color: 'black'}},
@@ -37,8 +40,6 @@ var app = new Vue({
           {name: 'Olive Green', style: {backgroundColor: '#808000'}},
           {name: 'Rasberry Red', style: {backgroundColor: '#E30B5D'}},
           {name: 'Rose Beige', style: {backgroundColor: '#FFCC99', color: 'black'}},
-          {name: 'Royal Blue', style: {backgroundColor: '#4169E1'}},
-          {name: 'Sky Blue', style: {backgroundColor: '#87CEEB'}},
           {name: 'Smokey Grey', style: {backgroundColor: '#708090'}},
           {name: 'Charcoal Grey', style: {backgroundColor: '#36454F'}},
           {name: 'Teal', style: {backgroundColor: '#008080'}},
