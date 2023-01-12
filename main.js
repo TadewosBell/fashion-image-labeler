@@ -30,7 +30,7 @@ var app = new Vue({
           {name: 'Pink', style: {backgroundColor: '#FFC0CB'}},
           {name: 'Hot Pink', style: {backgroundColor: '#FF69B4'}},
           {name: 'Magenta', style: {backgroundColor: '#FF00FF'}},
-          {name: 'Lemon Yellow', style: {backgroundColor: '#FFFF00', color: 'black'}},
+          {name: 'Yellow', style: {backgroundColor: '#FFFF00', color: 'black'}},
           {name: 'Orange', style: {backgroundColor: '#FFA500'}},
           {name: 'Mauve', style: {backgroundColor: '#E0B0FF', color: 'black'}},
           {name: 'Metallic', style: {backgroundColor: '#D3D3D3', color: 'black'}},
@@ -57,6 +57,7 @@ var app = new Vue({
         imageSrc: '',
         product: {},
         token: '',
+        listOfProducts: [],
       };
     },
     methods: {
@@ -67,9 +68,12 @@ var app = new Vue({
                 if(product.mainImage.includes('ssense.com')) {
                     console.log('ssense.com')
                     this.getImage();
+                } else {
+                    this.imageSrc = `https://inshopthumbs.s3.amazonaws.com/product_images/${product._id}.jpg`;
+                    this.product = product;
+                    // push product to listOfProducts
+                    this.listOfProducts.push(product);
                 }
-                this.imageSrc = `https://inshopthumbs.s3.amazonaws.com/product_images/${product._id}.jpg`;
-                this.product = product;
                 });
         },
         labelColor(label) {
@@ -77,6 +81,8 @@ var app = new Vue({
             // call SaveImagelabel with product._id and label
             if(!this.product) return;
             const product = this.product;
+            // push product to listOfProducts
+            this.listOfProducts.push(product);
             const getNewImage = this.getImage;
             const token = this.token;
             saveImagelabel({
@@ -88,6 +94,15 @@ var app = new Vue({
                 console.log(response)
                 getNewImage();
             });
+        },
+        previousProduct() {
+            // when clicked on previous product button set product to previous product in listOfProducts
+            const index = this.listOfProducts.indexOf(this.product);
+            if(index != -1) {
+                this.product = this.listOfProducts[index - 1];
+                this.imageSrc = `https://inshopthumbs.s3.amazonaws.com/product_images/${this.product._id}.jpg`;
+            }
+
         }
     },
   })
