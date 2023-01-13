@@ -69,11 +69,11 @@ var app = new Vue({
                     console.log('ssense.com')
                     this.getImage();
                 } else {
+                    this.listOfProducts.push(product);
+                }
                     this.imageSrc = `https://inshopthumbs.s3.amazonaws.com/product_images/${product._id}.jpg`;
                     this.product = product;
                     // push product to listOfProducts
-                    this.listOfProducts.push(product);
-                }
                 });
         },
         labelColor(label) {
