@@ -80,7 +80,9 @@ var app = new Vue({
             console.log(label);
             // call SaveImagelabel with product._id and label
             if(!this.product) return;
+            this.product.image_labeled = label;
             const product = this.product;
+            
             // push product to listOfProducts
             this.listOfProducts.push(product);
             const getNewImage = this.getImage;

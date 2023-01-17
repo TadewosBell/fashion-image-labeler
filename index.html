@@ -24,6 +24,7 @@
           <p class="productLabel">{{product.name}}</p>
           <p class="">{{product.url}}</p>
           <img class="productImage" :src="imageSrc" />
+          <p><b>{{product.image_labeled}}</b></p>
           <button class="nextButton" @click="getImage">Next</button>
           <button class="previousButton" @click="previousProduct">Previous</button>
         </div>
